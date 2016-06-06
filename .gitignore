@@ -1,0 +1,12 @@
+.gradle
+/local.properties
+/.idea
+/redexp.iml
+/app/app.iml
+.DS_Store
+/build
+/captures
+/app/src/main/assets/RedExp-6e51737907ee.p12
+/app/google-services.json
+/Documents/keys
+/redexp_keytool.jks

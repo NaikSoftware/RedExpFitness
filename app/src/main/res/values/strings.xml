@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">RedExp Fitness</string>
+    <string name="error_connection">Connection lost. Check you Internet connection</string>
+    <string name="error_play_services">GooglePlay services not working properly!</string>
+    <string name="title_activity_programm">ProgrammActivity</string>
+    <string name="error_device_have_not_play_services">App not working without GooglePlay Services!</string>
+    <string name="choose_programm">Choose programm</string>
+    <string name="chart_title_running">Running</string>
+    <string name="chart_label_x_runnung">Time</string>
+    <string name="chart_label_y_running">Vdot</string>
+    <string name="calories">calories</string>
+    <string name="steps">steps</string>
+    <string name="distance">distance</string>
+    <string name="speed">speed</string>
+    <string name="chart_title_walking">Walking</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="history">History</string>
+    <string name="walking">Walking</string>
+    <string name="running">Running</string>
+    <string name="cycling">Cycling</string>
+    <string name="statistic">statistic</string>
+    <string name="current_session">Current session</string>
+    <string name="chart_title_cycling">Cycling</string>
+
+    <string name="google_maps_api_key" translatable="false">AIzaSyA5jTpB65JH14i0pUNpNdsIJ-euBTFLW1U</string>
+</resources>

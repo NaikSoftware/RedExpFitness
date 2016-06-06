@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:columnCount="2"
+    app:rowCount="6">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Session"
+        app:layout_columnWeight="1"/>
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_gravity="center"
+        app:layout_rowSpan="6"/>
+
+    <TextView
+        android:id="@+id/tv_activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        tools:text="Running"/>
+
+    <TextView
+        android:id="@+id/tv_datetime_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        tools:text="2012-12-12 12:55"/>
+
+    <TextView
+        android:id="@+id/tv_datetime_stop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        tools:text="2012-12-12 12:55"/>
+
+    <TextView
+        android:id="@+id/tv_calories"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        tools:text="250 kcal"/>
+
+    <TextView
+        android:id="@+id/tv_steps"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        tools:text="5000 steps"/>
+
+</android.support.v7.widget.GridLayout>

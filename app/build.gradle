@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "redexp.ua.redexp"
+//        minSdkVersion 15
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+    dataBinding {
+        enabled = true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../redexp_keytool.jks")
+            storePassword "RedExp_2016"
+            keyAlias "RedExp_2016"
+            keyPassword "RedExp_2016"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.android.support:gridlayout-v7:23.4.0'
+    compile 'com.android.support:support-annotations:23.4.0'
+
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+
+    compile 'io.reactivex:rxandroid:1.0.1'
+//    compile 'com.patloew.rxfit:rxfit:1.2.1'
+    compile 'com.github.NaikSoftware:RxGoogle:1.3.2'
+
+    compile 'com.google.android.gms:play-services-fitness:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+//    compile 'com.google.android.gms:play-services-plus:8.3.0'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'joda-time:joda-time:2.9.2'
+
+//    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+
+    compile 'com.google.apis:google-api-services-prediction:v1.6-rev59-1.21.0'
+    compile 'com.google.apis:google-api-services-storage:v1-rev65-1.21.0'
+
+    compile 'com.diogobernardino:williamchart:2.2'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.0'
+    compile 'com.mikhaellopez:circularprogressbar:1.1.1'
+    compile 'com.hannesdorfmann:adapterdelegates:1.1.1'
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'realm-android'
